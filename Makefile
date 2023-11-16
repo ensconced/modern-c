@@ -1,5 +1,5 @@
 CC=clang
-CFLAGS=-Wall -std=c17
+CFLAGS=-Wall -Wextra -Werror -pedantic-errors -std=c17 -g
 TARGET=program.o
 SRC=program.c
 
