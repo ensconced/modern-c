@@ -1,0 +1,1 @@
+double differentiate(double x);
