@@ -2,11 +2,9 @@ CC=clang
 CFLAGS=-Wall -Wextra -Werror -pedantic-errors -std=c17 -g
 BIN_DIR=bin
 
-.PHONY: run clean
-
-$(BIN_DIR)/main: main.c
+$(BIN_DIR)/test: test.c lib.c ../test-utils/lib.c
 	mkdir -p $(BIN_DIR)
-	$(CC) $(CFLAGS) -o $@ $<
+	$(CC) $(CFLAGS) -o $@ $^
 
-run: $(BIN_DIR)/main
+test: $(BIN_DIR)/test
 	$<
