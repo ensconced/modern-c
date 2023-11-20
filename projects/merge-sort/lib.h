@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include <stddef.h>
 
 void merge(float src[], size_t start_idx, size_t midpoint, size_t end_idx,
            float target[]);

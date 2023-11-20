@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include <stddef.h>
 
 size_t partition(float arr[], size_t start_idx, size_t end_idx) {
   size_t partition_idx = start_idx;

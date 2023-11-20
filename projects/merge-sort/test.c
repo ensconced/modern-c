@@ -2,7 +2,6 @@
 #include "lib.h"
 #include <assert.h>
 #include <stdbool.h>
-#include <stdio.h>
 
 void test_merge_halves(void) {
   float arr[] = {0, 3, 5, 1, 2, 4};
