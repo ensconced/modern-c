@@ -1,4 +1,5 @@
 #include <stdbool.h>
+#include <stddef.h>
 #include <stdio.h>
 
 bool arrs_are_equal(float a[], float b[], size_t a_len, size_t b_len) {
