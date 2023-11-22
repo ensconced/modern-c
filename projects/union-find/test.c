@@ -6,9 +6,7 @@ static const size_t forest_len = 6;
 
 void test_union(void) {
   size_t forest[forest_len];
-  for (size_t i = 0; i < forest_len; ++i) {
-    forest[i] = SIZE_MAX;
-  }
+  init_forest(forest, forest_len);
 
   for (size_t i = 0; i < forest_len; ++i) {
     assert(find_root(i, forest) == i);
@@ -40,4 +38,12 @@ void test_union(void) {
   assert(find_root(4, forest) == find_root(5, forest));
 }
 
-int main(void) { test_union(); }
+void test_find_replace(void) {
+  // size_t forest_len = 4;
+  // size_t forest[forest_len];
+}
+
+int main(void) {
+  test_union();
+  test_find_replace();
+}

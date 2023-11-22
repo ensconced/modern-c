@@ -2,6 +2,12 @@
 #include <stddef.h>
 #include <stdint.h>
 
+void init_forest(size_t forest[], size_t forest_len) {
+  for (size_t i = 0; i < forest_len; ++i) {
+    forest[i] = SIZE_MAX;
+  }
+}
+
 size_t find_root(size_t index, size_t forest[]) {
   size_t parent = forest[index];
   return parent == SIZE_MAX ? index : find_root(parent, forest);
