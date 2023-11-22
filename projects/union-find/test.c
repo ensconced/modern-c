@@ -39,11 +39,28 @@ void test_union(void) {
 }
 
 void test_find_replace(void) {
-  // size_t forest_len = 4;
-  // size_t forest[forest_len];
+  size_t forest[] = {1, SIZE_MAX, 1, SIZE_MAX};
+  find_replace(2, 3, forest);
+  assert(forest[0] == 1);
+  assert(forest[1] == 3);
+  assert(forest[2] == 3);
+  assert(forest[3] == SIZE_MAX);
+}
+
+void test_find_compress(void) {
+  size_t forest[] = {1, 2, 3, 4, SIZE_MAX, 4};
+  size_t root = find_compress(0, forest);
+  assert(root == 4);
+  assert(forest[0] == 4);
+  assert(forest[1] == 4);
+  assert(forest[2] == 4);
+  assert(forest[3] == 4);
+  assert(forest[4] == SIZE_MAX);
+  assert(forest[5] == 4);
 }
 
 int main(void) {
-  test_union();
   test_find_replace();
+  test_find_compress();
+  test_union();
 }
